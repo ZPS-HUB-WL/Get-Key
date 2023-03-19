@@ -53,4 +53,5 @@ Tab:AddButton({
 	Name = "Clipboard Link Get Key",
 	Callback = function()
 setclipboard(tostring("https://link-center.net/638192/zps-hub-lite-key2"))   
+end
 })
