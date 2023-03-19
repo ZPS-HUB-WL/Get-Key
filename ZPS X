@@ -1,0 +1,56 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "GET KEY ZPS HUB", HidePremium = false, SaveConfig = false,})
+
+getgenv().Key = "XZFFYHADIHHITHNIHFUIFGUSHIFZPS"
+_G.KeyInput = "string"
+
+function MakeScriptZPSHub()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/ZPS-HUB-WL/ZPS-HUB-X/main/ZPS%20X%20HUB')))()
+end    
+
+function IvandKeyNotification()
+game.Players.LocalPlayer:Kick("Key Sai Hãy Bấm Get Key Đễ LẤy Link Get Key")
+end
+
+function Correcttion()
+    OrionLib:MakeNotification({
+        Name = "Correct Key!",
+        Content = "Đúng LÀ Con Zai Của ta",
+        Image = "rbxassetid://",
+        Time = 5
+    })
+end 
+
+local Tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Check Key",
+	Callback = function()
+      		if _G.KeyInput == getgenv().Key then
+            MakeScriptZPSHub()
+            Correcttion()
+            else
+                IvandKeyNotification()
+            end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Clipboard Link Get Key",
+	Callback = function()
+setclipboard(tostring("https://link-center.net/638192/zps-hub-lite-key2"))   
+})
